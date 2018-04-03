@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Chrome_test]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="Testcases.Verify_SocialLogin">
+        <methods>
+          <include name="Dashboardlogin"/>
+          <include name="SetUp"/>
+        </methods>
+      </class> <!-- Testcases.Verify_SocialLogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Chrome_test] -->

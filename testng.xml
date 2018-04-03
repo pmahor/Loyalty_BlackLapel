@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Chrome_test" >
+  <test name="Test">
+    <classes>
+       <class name="Testcases.Verify_SocialLogin"/>
+       <class name="Testcases.VerifySharingActivity"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Chrome_test -->
