@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Testcases.VerifySharingActivity">
+      <class name="Testcases.VerifyReferralClick">
         <methods>
-          <include name="SetUp"/>
-          <include name="Emailsharecheck"/>
+          <include name="EmailReferral"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- Testcases.VerifySharingActivity -->
+      </class> <!-- Testcases.VerifyReferralClick -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

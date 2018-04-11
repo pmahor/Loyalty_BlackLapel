@@ -5,6 +5,8 @@
     <classes>
        <class name="Testcases.Verify_SocialLogin"/>
        <class name="Testcases.VerifySharingActivity"/>
+       <class name="Testcases.VerifyDashboardpage"/>
+       <class name="Testcases.VerifyReferralClick"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Chrome_test -->

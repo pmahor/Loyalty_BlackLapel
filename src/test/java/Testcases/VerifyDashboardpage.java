@@ -7,33 +7,27 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import Pages.DashboardPages;
 import Pages.SocialLogin;
 import factory.BrowserFactory;
 import factory.Dataproviderfactory;
 
-
-public class Verify_SocialLogin 
+public class VerifyDashboardpage 
 {
-
 	WebDriver driver;
+	DashboardPages dashboardobj;
 	SocialLogin SocialLoginobj;
-	VerifySharingActivity Sharingactobj;
-	
-	
-	@BeforeTest(description="This test case will verify Login Page")
-	public void SetUp()
+
+	@BeforeTest
+	public void setup()
 	{
-		driver= BrowserFactory.getBrowser("Chrome");
-		
+		driver=BrowserFactory.getBrowser("Chrome");
 		driver.manage().window().maximize();
-		
 		driver.get(Dataproviderfactory.getConfig().getUrl());
 		
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-		
+		dashboardobj=PageFactory.initElements(driver, DashboardPages.class);
 		SocialLoginobj=PageFactory.initElements(driver,SocialLogin.class);
-		Sharingactobj=PageFactory.initElements(driver,VerifySharingActivity.class);
-			
 	}
 	
 	@Test(priority=1)
@@ -43,20 +37,46 @@ public class Verify_SocialLogin
 	}
 	
 	@Test(priority=2)
-	public void logut()
+	public void Dashboardlogin()
 	{
-		SocialLoginobj.logout();
+		
+		SocialLoginobj.LoyaltyDashboard();
 	}
 	
 	@Test(priority=3)
-	public void Gmaillogin()
+	public void MemberBenefit_Tab()
 	{
-		SocialLoginobj.Gmail_Login();
+		dashboardobj.MemberbeniftTab();
 	}
 	
-	/*@Test(priority=2)
-	public void Dashboardlogin()
+	@Test(priority=4)
+	public void Dashboard_Tab()
 	{
-		SocialLoginobj.LoyaltyDashboard();
-	}*/
+		dashboardobj.DashobardPage();
+	}
+	
+	@Test(priority=5)
+	public void Pointsreward_Tab()
+	{
+		dashboardobj.points_rewardtab();
+		
+	}
+	
+	@Test(priority=6)
+	public void Reward_Tab()
+	{
+		dashboardobj.Rewardltab();
+		
+	}
+	
+	@Test(priority=7)
+	public void Reviews_Tab()
+	{
+		dashboardobj.Rating_Reviews();
+		
+	}
+	
+	
+
+
 }

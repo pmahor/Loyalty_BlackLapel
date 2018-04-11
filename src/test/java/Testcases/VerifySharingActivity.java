@@ -50,16 +50,48 @@ public class VerifySharingActivity
 	{
 		SocialLoginobj.fblogin();
 	}
+	
 	@Test(priority=2)
 	public void Dashboardlogin()
 	{
 		SocialLoginobj.LoyaltyDashboard();
 	}
+	
+	/*@Test(priority=1)
+	public void Gmaillogin()
+	{
+		SocialLoginobj.Gmail_Login();
+	}*/
+	
 	@Test(priority=3)
 	public void Emailsharecheck()
 	{
 		sharingobj.EmailSharing();
 	}
+	
+	@Test(priority=4)
+	public void Facebookshare()
+	{
+		sharingobj.FbSharing();
+	}
+	
+	@Test(priority=5)
+	public void Twittershare()
+	{
+		sharingobj.twSharing();
+	}
+	
+	@Test(priority=6)
+	public void PersonalBitlyshare()
+	{
+		sharingobj.bitlyshare();
+	}
+	
+	/*@Test(priority=7)
+	public void Personalbitly_Couponcode()
+	{
+		sharingobj.unlockcode();
+	}*/
 	
 	
 

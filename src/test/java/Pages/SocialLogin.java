@@ -145,6 +145,7 @@ public class SocialLogin
 	{
 		try 
 		{
+			Thread.sleep(10000);
 		
 		System.out.println("Move to Dashboard");
 		myaccoutnlink.click();
